@@ -1,0 +1,65 @@
+:root {
+    --color-background: #303633;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842C2;
+    --color-secundary: #fca311;
+    --color-secundary-dark: #ffba08;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #303633;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-button-text: #303633;
+    --color-box-base: #d2d4d3;
+    --color-box-footer: #FAFAFC;
+    --color-input-background:#fff;
+  
+    
+  --landinf-green: #04D361;
+  --landinf-green-dark: #04BF58;
+
+
+    font-size: 60%;
+  }
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+html, body, #root {
+      height: 100vh;
+  }
+
+  body {
+      background: var(--color-background);
+  }
+
+  #root {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  body, input, button, textarea {
+      font: 500 1.6rem Poppins;
+      color: var(--color-text-base);
+  }
+
+  /* ocupa 90% da tela */
+  .container {
+      width: 90vw;
+      max-width: 700px;
+  }
+
+  /* aumenta a fonte conforme a tela */
+  @media (min-width: 700px) {
+      :root {
+          font-size: 62.5%;
+      }
+  }

@@ -1,0 +1,54 @@
+.teacher-item{
+    background: var(--color-box-base);
+    border: 1px solid #000;
+    border-radius: 0.8rem;
+    margin: -3.2rem auto 3.2rem;
+    margin-top: 2.4rem;
+    overflow: hidden;
+}
+
+.teacher-item header{
+    padding: 3.2rem 2rem;
+    display: flex;
+    align-items: center;
+    height: 20rem;
+}
+
+.teacher-item  img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teacher-item header img:hover{
+    cursor: pointer;
+}
+
+
+/* a seta serve pra pegar o primeiro P */
+.teacher-item > p{
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.teacher-item footer{
+    font: 700 2.4rem Archivo;
+  color: var(--color-text-title);
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--color-line-in-white);
+}
+
+.teacher-item footer p strong{
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    display: block;
+}
