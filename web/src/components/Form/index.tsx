@@ -6,16 +6,12 @@ import api from '../../services/api';
 // import FiPaperclip from 'react-icons';
 
 
-import Input from "../Input/";
-import Textarea from "../Textarea/";
+import Input from "../Input";
+import Textarea from "../Textarea";
 
 import './styles.css';
 
-export default function TeacherForm() {
-
-
-
-
+export default function Form() {
   
 
   const history = useHistory();
@@ -32,17 +28,18 @@ export default function TeacherForm() {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
 
-  async function handleSubmit(event: FormEvent) {
+  const handleSubmit = async (event: FormEvent) => {
     debugger
     event.preventDefault();
    
 
     const data = new FormData();
-
     data.append("nome", nome);
+
+    // console.log(data.append.name)
     data.append("bio", bio);
-    data.append("addres", String(address));
-    data.append("school", String(school));
+    data.append("adress", address);
+    data.append("school", school);
     data.append("email", email);
     data.append("password", password);
 
@@ -50,15 +47,12 @@ export default function TeacherForm() {
       data.append("images", image);
     });
 
-    await api.post("infos", data);
+     api.post("infos", data).then(bla => {}).catch(err => {});
 
     alert("Cadastro com Sucesso!");
 
-    history.push("/app");
+    // history.push("/");
   }
-
-
-
 
 
     return(
@@ -90,29 +84,33 @@ export default function TeacherForm() {
                 type="file"
                 id="image[]"
               />
+              
           <Input
              value={nome}
-             onChange={(event) => setNome(event.target.value)}
+             onChange={({ target}) => setNome(target.value)}
           id="nome"   name="name" label="Nome Completo" />
+
+
+
           <Textarea
              value={bio}
-             onChange={(event) => setBio(event.target.value)}
+             onChange={({ target}) => setBio(target.value)}
           id="bio" name="bio" label="Biografia" />
           <Input
            value={address}
-           onChange={(event) => setAddress(event.target.value)}
+           onChange={({ target}) => setAddress(target.value)}
           id="adress" name="adress" label="Cidade" />
           <Input
             value={school}
-            onChange={(event) => setSchool(event.target.value)}
+            onChange={({ target}) => setSchool(target.value)}
           id="scool"  name="scool" label="Escolaridade" />
           <Input
              value={email}
-             onChange={(event) => setEmail(event.target.value)}
+             onChange={({ target}) => setEmail(target.value)}
           id="email"  name="email" label="Email" />
           <Input
              value={password}
-             onChange={(event) => setPassword(event.target.value)}
+             onChange={({ target}) => setPassword(target.value)}
           id="password"  name="password" label="Senha" />
           </fieldset>
 

@@ -1,14 +1,14 @@
 import React, { FormEvent, useState } from 'react';
-import PageHeader from '../../components/PageHeader';
-import Form from '../../components/Form';
+import PageHeader from '../../../components/PageHeader';
+import Form from '../../../components/Form';
 
-import Github from '../../assets/images/icons/github.svg'
-import Linkedin from '../../assets/images/icons/linkedin.svg'
-import Google from '../../assets/images/icons/google.svg'
+import Github from '../../../assets/images/icons/github.svg'
+import Linkedin from '../../../assets/images/icons/linkedin.svg'
+import Google from '../../../assets/images/icons/google.svg'
 
 
 import './styles.css'
-import api from '../../services/api';
+import api from '../../../services/api';
 import { useHistory } from 'react-router-dom';
 
 function TeacherForm(){

@@ -6,13 +6,12 @@ export default {
 
         return{
             id:           info.id,
-            name:         info.name,
-            latitude:     info.latitude,
-            longitude:    info.longitude,
-            about:        info.about,
-            instructions: info.instructions,
-            opening_hours:info.opening_hours,
-            open_on_weekends:info.open_on_weekends,
+            name:         info.nome,
+            latitude:     info.bio,
+            longitude:    info.adress,
+            about:        info.school,
+            instructions: info.email,
+            opening_hours:info.password,
             images: imagesView.renderManny(info.images)
         };
     },
